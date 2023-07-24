@@ -17,7 +17,7 @@ export const CardList = ({ deckId }) => {
     listDecks(abortController.signal)
       .then((decks) => {
          // Find the deck with the specified deckId
-        const selectedDeck = decks.find((deck) => deck.id === parseInt(deckId));
+        const selectedDeck = decks.find((deck) => deck.id === parseInt(deckId, 10));
         if (selectedDeck) {
           // Set the cards for the selected deck
           setCards(selectedDeck.cards);

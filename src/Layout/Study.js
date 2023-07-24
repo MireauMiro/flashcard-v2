@@ -71,7 +71,6 @@ function Study() {
             <li className="breadcrumb-item active">Study</li>
           </ol>
           <div className="container">
-            <h2>{deck.name}</h2>
             <Route>
               <NotEnough />
             </Route>
