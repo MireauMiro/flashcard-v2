@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/flashcard-v2/static/css/main.2c16f0ad.css",
+    "main.js": "/flashcard-v2/static/js/main.ce875373.js",
+    "index.html": "/flashcard-v2/index.html",
+    "main.2c16f0ad.css.map": "/flashcard-v2/static/css/main.2c16f0ad.css.map",
+    "main.ce875373.js.map": "/flashcard-v2/static/js/main.ce875373.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c16f0ad.css",
+    "static/js/main.ce875373.js"
+  ]
+}
