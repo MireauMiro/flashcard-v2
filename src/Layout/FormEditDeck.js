@@ -7,7 +7,6 @@ import ErrorMessage from "./ErrorMessage";
 
 function FormEditDeck() {
   const { deckId } = useParams();
-  console.log(deckId);
 
   const [deck, setDeck] = useState({});
   const [error, setError] = useState(undefined);

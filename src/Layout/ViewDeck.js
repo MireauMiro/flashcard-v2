@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Switch, Route, Link, useParams, useHistory } from "react-router-dom";
+import { Link, useParams, useHistory } from "react-router-dom";
 import { readDeck, deleteDeck } from "../utils/api";
 
 import ErrorMessage from "./ErrorMessage";
@@ -9,7 +9,7 @@ export const ViewDeck = () => {
 
   const [deck, setDeck] = useState({ cards: [] });
   const [error, setError] = useState(undefined);
-  const { deckId, cardId } = useParams();
+  const { deckId } = useParams();
 
   useEffect(() => {
     const abortController = new AbortController();
@@ -23,8 +23,7 @@ export const ViewDeck = () => {
   const handleDelete = async (id) => {
   const result = window.confirm("Are you sure you want to delete this post?");
     if (result) {
-        // await deleteDeck(id);
-        // Update the state of the component with the new list of decks
+        await deleteDeck(id);
         history.push("/");// After the post is deleted, send the user to the home page.
     }
   };
@@ -67,7 +66,7 @@ export const ViewDeck = () => {
           </article>
           <article>
           <h2>Cards</h2>
-            <CardList deckId={deckId} />
+            <CardList deck={deck} />
           </article>
         </>
       ) : (

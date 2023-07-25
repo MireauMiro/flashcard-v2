@@ -56,7 +56,6 @@ function FormEditCard() {
     });    
   }
   
-  console.log(formData);
 
   const handleEditSubmit = async (event) => {
     event.preventDefault();

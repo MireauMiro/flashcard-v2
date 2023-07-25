@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams, useHistory } from "react-router-dom";
 import { readDeck, createCard } from "../utils/api";
+
 import FormCard from "./FormCard";
+import ErrorMessage from "./ErrorMessage";
 
 function FormCreateCard() {
   const { deckId } = useParams();
@@ -9,7 +11,6 @@ function FormCreateCard() {
   const [deck, setDeck] = useState({});
   const [error, setError] = useState(undefined);
 
-  console.log(deckId);
 
   useEffect(() => {
     const abortController = new AbortController();
@@ -19,7 +20,7 @@ function FormCreateCard() {
     return () => abortController.abort();
   }, [deckId]);
 
-  console.log(deckId);
+
 
   const initialFormState = {
     front: "",
@@ -41,6 +42,10 @@ function FormCreateCard() {
     createCard(deckId, card);
     setFormData({ ...initialFormState });
   };
+
+  if (error) {
+    return <ErrorMessage error={error} />;
+  }
 
   return (
     <>

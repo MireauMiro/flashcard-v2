@@ -50,13 +50,13 @@ function Study() {
     });
   };
 
-  const handlePrevCard = () => {
-    setCurrentCard((prevCard) => {
-      let currentIndex = deck.cards.indexOf(prevCard);
-      const nextIndex = currentIndex - 1;
-      return nextIndex >= 0 ? deck.cards[nextIndex] : prevCard;
-    });
-  };
+  //const handlePrevCard = () => {
+  //  setCurrentCard((prevCard) => {
+  //    let currentIndex = deck.cards.indexOf(prevCard);
+  //    const nextIndex = currentIndex - 1;
+  //    return nextIndex >= 0 ? deck.cards[nextIndex] : prevCard;
+  //  });
+  //};
   
 
 

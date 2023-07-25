@@ -25,8 +25,7 @@ export const DeckList = () => {
   const handleDelete = async (id) => {
     const result = window.confirm("Are you sure you want to delete this post?");
       if (result) {
-        // await deleteDeck(id);
-        // Update the state of the component with the new list of decks
+        await deleteDeck(id);
         history.push("/");// After the post is deleted, send the user to the home page.
       }
     };

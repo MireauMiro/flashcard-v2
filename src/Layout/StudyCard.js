@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { Link, useParams } from "react-router-dom";
 
 
 function StudyCard({ card, cardIndex, deckLength, handleNextCard }) {
-  const { deckId } = useParams();
 
   const frontSide = card.front;
   const backSide = card.back;
