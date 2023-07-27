@@ -26,6 +26,7 @@ export const DeckList = () => {
     const result = window.confirm("Are you sure you want to delete this post?");
       if (result) {
         await deleteDeck(id);
+        await listDecks().then(setDecks).catch(setError);
         history.push("/");// After the post is deleted, send the user to the home page.
       }
     };

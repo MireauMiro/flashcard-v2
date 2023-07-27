@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import NotFound from "./NotFound";
 
-function CardItem({ deck, card, handleDelete }) {
+function CardItem({ deck, card, handleCardDelete }) {
   if (card) {
     return (
     <>
@@ -16,7 +16,7 @@ function CardItem({ deck, card, handleDelete }) {
               <Link to={`/decks/${deck.id}/cards/${card.id}/edit`}>Edit</Link>
             </div>
             <div>
-              <button className="btn btn-danger" onClick={() => handleDelete(card.id)}>
+              <button className="btn btn-danger" onClick={() => handleCardDelete(card.id)}>
                 Delete 
               </button>
             </div>

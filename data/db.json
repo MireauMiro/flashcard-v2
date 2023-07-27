@@ -11,8 +11,8 @@
       "id": 2
     },
     {
-      "name": "This is an update to  new deck",
-      "description": "This is the description for the new deck, and this is an update",
+      "name": "a delete deck",
+      "description": "delete me",
       "id": 3
     }
   ],
@@ -55,16 +55,22 @@
       "id": 7
     },
     {
-      "front": "This is the front of a card",
-      "back": "This is the back of a card asdfadsf",
+      "front": "added card",
+      "back": "card added",
       "deckId": 3,
       "id": 8
     },
     {
-      "front": "Another Front",
-      "back": "Another Back",
+      "front": "awdf",
+      "back": "sadfasfd",
       "deckId": 3,
       "id": 9
+    },
+    {
+      "front": "asdfasga",
+      "back": "dfaasdfdasf",
+      "deckId": 3,
+      "id": 10
     }
   ]
 }

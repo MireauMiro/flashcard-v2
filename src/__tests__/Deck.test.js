@@ -73,7 +73,7 @@ describe("Decks", () => {
           id: 4,
           front: "What has ears but cannot hear?",
           back: "A cornfield.",
-          deckId: 3,
+          deckId: 8,
         },
       ],
     };
